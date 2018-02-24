@@ -19,7 +19,12 @@
 #' @importFrom assertthat assert_that
 #' @export
 #'
-#' @examples
+#' @examples \dontrun{
+#' #Register your Asana Personal Access Token if you haven't already
+#' #Note that you need to pass the 'personal_access_token'
+#' #parameter if you call this function for the first time.
+#' registerOptions(personal_access_token="<YOUR-PA-TOKEN>" )
+#' } 
 registerOptions <- function(verbose = TRUE,
                             ...) {
   args <- list(...)
