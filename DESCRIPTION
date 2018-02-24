@@ -1,6 +1,6 @@
 Package: asanaR
 Version: 0.0.0.9000
-Title: What the Package Does (one line, title case)
+Title: Asana API Client
 Description: What the package does (one paragraph).
 Authors@R: person("First", "Last", , "first.last@example.com", c("aut", "cre"))
 License: MIT + file LICENSE
@@ -9,3 +9,7 @@ LazyData: true
 ByteCompile: true
 Suggests: 
     testthat
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.0.1
+Imports: 
+    magrittr
