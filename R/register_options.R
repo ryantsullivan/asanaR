@@ -18,9 +18,9 @@
 #' #Register your Asana Personal Access Token if you haven't already
 #' #Note that you need to pass the 'personal_access_token'
 #' #parameter if you call this function for the first time.
-#' registerOptions(personal_access_token="<YOUR-PA-TOKEN>" )
+#' register_options(personal_access_token="<YOUR-PA-TOKEN>" )
 #' } 
-registerOptions <- function(verbose = TRUE,
+register_options <- function(verbose = TRUE,
                             ...) {
   args <- list(...)
   personal_access_token <- ifelse("personal_access_token" %in% names(args), args$personal_access_token, NA)
@@ -30,7 +30,7 @@ registerOptions <- function(verbose = TRUE,
   if (is.na(personal_access_token)) {
     ex <- file.exists(".asana.yml")
     # Throw Error if files does not exist
-    assertthat::assert_that(ex == TRUE, msg = "No .asana.yml file. Either set your Personal Access Token using the `registerOptions` function or create a configuration file. Execute 'asanaRconfigFile()' to view an example of a configuration file.")
+    assertthat::assert_that(ex == TRUE, msg = "No .asana.yml file. Either set your Personal Access Token using the `register_options` function or create a configuration file. Execute 'asanaRconfigFile()' to view an example of a configuration file.")
     # Load File
     pac <- yaml::yaml.load_file(".asana.yml")
     # Assert that name is personal_access_token
@@ -41,7 +41,7 @@ registerOptions <- function(verbose = TRUE,
   }
   # Check Args
   # If personal_access_token is still NA and environment is empty, throw error
-  assertthat::assert_that(!is.na(personal_access_token) | Sys.getenv("ASANA_PERSONAL_ACCESS_TOKEN") != "", msg = "'personal_access_token' parameter must either be specified in the .asana.yml configuration file or passed to the 'registerOptions' function. To view an example of a configuration file, execute 'asanaRconfigFile()'.")
+  assertthat::assert_that(!is.na(personal_access_token) | Sys.getenv("ASANA_PERSONAL_ACCESS_TOKEN") != "", msg = "'personal_access_token' parameter must either be specified in the .asana.yml configuration file or passed to the 'register_options' function. To view an example of a configuration file, execute 'asanaRconfigFile()'.")
   # Set Environment Variable
   if (!is.na(personal_access_token)) Sys.setenv("ASANA_PERSONAL_ACCESS_TOKEN" = personal_access_token)
 }
