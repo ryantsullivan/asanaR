@@ -19,9 +19,9 @@
 #' #Note that you need to pass the 'personal_access_token'
 #' #parameter if you call this function for the first time.
 #' register_options(personal_access_token="<YOUR-PA-TOKEN>" )
-#' } 
+#' }
 register_options <- function(verbose = TRUE,
-                            ...) {
+                             ...) {
   args <- list(...)
   personal_access_token <- ifelse("personal_access_token" %in% names(args), args$personal_access_token, NA)
   # Set Personal Access Token if not NA
