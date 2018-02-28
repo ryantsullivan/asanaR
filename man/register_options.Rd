@@ -20,7 +20,7 @@ This function registers the user's Asana Personal Access Token.
 #Note that you need to pass the 'personal_access_token'
 #parameter if you call this function for the first time.
 register_options(personal_access_token="<YOUR-PA-TOKEN>" )
-} 
+}
 }
 \seealso{
 See \url{https://asana.com/developers/documentation/getting-started/auth#personal-access-token}

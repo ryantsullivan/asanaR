@@ -2,6 +2,7 @@
 
 export("%>%")
 export(asanaRconfigFile)
+export(get_workspaces)
 export(register_options)
 importFrom(assertthat,assert_that)
 importFrom(magrittr,"%>%")
