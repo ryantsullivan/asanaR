@@ -1,24 +1,9 @@
-#' Construct Asana API Url 
-#'
-#' @param end_point The Resource that the user is trying to reach
-#' @param limit A value between 1 & 100.
-#' 
-#' @export
-#' @author Ryan Sullivan
-construct_url <- function(end_point = NULL,  limit = 10) {
-    root_url <- "https://app.asana.com/"
-    path <- paste0("api/1.0/", end_point)
-    query = list(limit = limit)
-    url <- httr::modify_url(root_url, path = path, query = query)
-    return(url)
-}
+# utils.R contains helper functions for the asanaR package. These functions should not be called directly by the user and should not be exported.
 
-#' Construct a header to send to the Asana API
+#' Construct a header to send to qualtrics API
 #'
-#' @param personal_access_token Personal Access Token. Available in your Asana account
+#' @param personal_access_token Personal Access Token. Available in your Asana account.
 #'
-#'
-#' @author Ryan Sullivan
 construct_header <- function(personal_access_token) {
   # Construct and return
   headers <- c(
@@ -92,3 +77,17 @@ asana_errors <- function(resp, parsed) {
         call. = FALSE
     )
 }
+
+#' Construct Asana API Url 
+#' @param end_point The Resource that the user is trying to reach
+#' @param limit A value between 1 & 100.
+#' 
+#' @author Ryan Sullivan
+construct_url <- function(end_point = NULL,  limit = 10) {
+    root_url <- "https://app.asana.com/"
+    path <- paste0("api/1.0/", end_point)
+    query = list(limit = limit)
+    url <- httr::modify_url(root_url, path = path, query = query)
+    return(url)
+}
+

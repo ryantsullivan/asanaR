@@ -2,16 +2,13 @@
 % Please edit documentation in R/utils.R
 \name{construct_header}
 \alias{construct_header}
-\title{Consstruct a header to send to the Asana API}
+\title{Construct a header to send to qualtrics API}
 \usage{
 construct_header(personal_access_token)
 }
 \arguments{
-\item{personal_access_token}{Personal Access Token. Available in your Asana account}
+\item{personal_access_token}{Personal Access Token. Available in your Asana account.}
 }
 \description{
-Consstruct a header to send to the Asana API
-}
-\author{
-Ryan Sullivan
+Construct a header to send to qualtrics API
 }

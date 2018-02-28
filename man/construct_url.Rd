@@ -4,7 +4,7 @@
 \alias{construct_url}
 \title{Construct Asana API Url}
 \usage{
-construct_url(end_point = NULL, limit = 100)
+construct_url(end_point = NULL, limit = 10)
 }
 \arguments{
 \item{end_point}{The Resource that the user is trying to reach}

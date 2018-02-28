@@ -1,5 +1,4 @@
 #' Get workspaces from your Asana account
-#'
 #' @param limit Test
 #' @param all_pages Test
 #'
@@ -16,7 +15,7 @@ get_workspaces <- function(limit = 10, all_pages = TRUE) {
     # Set end_point
     end_point <- "workspaces"
     # construct_url
-    url <- construct_url(end_point = end_point, limit = limit)
+    url <- constructUrl(end_point = end_point, limit = limit)
     # make request
     cnt <- asana_api_request(verb = "GET",
                       url = url)
@@ -42,5 +41,3 @@ get_workspaces <- function(limit = 10, all_pages = TRUE) {
     }
     return(data)
 }
-
-get_workspaces()
