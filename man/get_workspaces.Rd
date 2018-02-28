@@ -16,9 +16,11 @@ Get workspaces from your Asana account
 }
 \examples{
 \dontrun{
-#Use this function 
 #A workspace is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.
  
 get_workspaces(limit = 10, all_pages = TRUE )
 }
+}
+\author{
+Ryan Sullivan
 }

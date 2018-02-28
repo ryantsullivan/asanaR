@@ -8,7 +8,10 @@ Imports:
     assertthat,
     magrittr,
     yaml,
-    httr
+    httr,
+    dplyr,
+    rlang,
+    jsonlite
 Suggests: 
     testthat
 ByteCompile: true

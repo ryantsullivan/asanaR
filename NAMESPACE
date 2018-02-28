@@ -2,8 +2,11 @@
 
 export("%>%")
 export(asanaRconfigFile)
+export(get_workspace)
 export(get_workspaces)
 export(register_options)
 importFrom(assertthat,assert_that)
+importFrom(dplyr,as_data_frame)
+importFrom(dplyr,bind_rows)
 importFrom(magrittr,"%>%")
 importFrom(yaml,yaml.load_file)

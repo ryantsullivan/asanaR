@@ -42,7 +42,7 @@ asana_api_request <- function(verb = c("GET", "POST", "PUT", "DELETE"),
   if (httr::http_type(resp) != "application/json") {
       stop('Asana API did not return JSON', call. = FALSE)
   }
-  parsed <- jsonlite::fromJSON(httr::content(resp, "text"), simplifyVector = TRUE)
+  parsed <- jsonlite::fromJSON(httr::content(resp, "text"))
   
   if (httr::http_error(resp)) {
       asana_errors(resp, parsed)
